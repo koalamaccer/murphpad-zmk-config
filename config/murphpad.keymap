@@ -62,28 +62,28 @@
         default_layer {
         label = "default layer";
             bindings = <
-                &bt BT_CLR       &kp F1       &kp F2          &kp F3            &kp F4
-                &rgb_ug RGB_TOG  &kp KP_NUM   &kp KP_DIVIDE   &kp KP_MULTIPLY   &kp KP_MINUS
-                &rgb_ug RGB_EFF  &kp KP_N7    &kp KP_N8       &kp KP_N9         &kp KP_PLUS
+                &bt BT_CLR       &kp ESC      &kp LC(C)          &kp LC(V)         &kp BSPC   
+                &rgb_ug RGB_TOG  &kp TAB      &kp KP_DIVIDE   &kp KP_MULTIPLY   &kp KP_MINUS    
+                &rgb_ug RGB_EFF  &kp KP_N7    &kp KP_N8       &kp KP_N9         &kp KP_PLUS   
                 &kp C_MUTE       &kp KP_N4    &kp KP_N5       &kp KP_N6         &trans
-                &mo FN           &kp KP_N1    &kp KP_N2       &kp KP_N3         &kp KP_ENTER
-                &kp BSPC         &kp KP_N0    &trans          &kp KP_DOT        &trans
+                &mo 1            &kp KP_N1    &kp KP_N2       &kp KP_N3         &kp KP_ENTER
+                &kp LA           &kp KP_N0    &trans          &kp KP_DOT        &trans
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
 
-        };
+        }; 
 
         fn_layer {
         label = "fn layer";
             bindings = <
-                &trans      &out OUT_TOG     &bt BT_PRV       &bt BT_NXT       &trans
-                &trans      &trans           &trans           &trans           &trans
-                &trans      &rgb_ug RGB_HUD  &rgb_ug RGB_SPI  &rgb_ug RGB_HUI  &trans
-                &bt BT_CLR  &rgb_ug RGB_EFR  &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &trans
-                &trans      &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &rgb_ug RGB_BRI  &trans
-                &kp DEL     &rgb_ug RGB_SAD  &trans           &rgb_ug RGB_SAI  &trans
-            >;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+                &trans      &trans  &trans     &trans       &kp DEL  
+                &trans      &trans &trans        &trans          &trans     
+                &trans      &kp home     &kp up        &kp pg_up         &trans
+                &bt BT_CLR  &kp left     &trans        &kp right          &trans    
+                &trans      &kp end     &kp down        &kp pg_dn          &trans
+                &trans      &trans     &trans        &trans          &trans           
+            >;  
+            sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
 
         };
     };
